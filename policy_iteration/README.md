@@ -20,6 +20,12 @@ Below, two examples of a car rental management real-world problem are chosen. Th
 
 ![Example 1 Optimal Policy and Value Function](results/example_2_optimal_policy_and_optimal_value_function.png)
 
+### References
+
+[1] Seaborn - Statistical Data Visualization: https://seaborn.pydata.org
+
+[2] scipy.stats.poisson: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.poisson.html
+
 ## Citation
 
 Please note that the code and technical details made available are for educational purposes only. The repo is not open for collaboration.
