@@ -1,8 +1,8 @@
 ################################################
 # Title     : Policy Iteration Algorithm
 # Author    : balarcode
-# Version   : 1.0
-# Date      : 18th June 2025
+# Version   : 1.1
+# Date      : 22nd June 2025
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
 # Comments  : Policy iteration algorithm is an iterative reinforcement
@@ -363,6 +363,8 @@ def example_2():
     EXAMPLE = 2
     policy_iteration()
 
+# %%
+# Policy Iteration Algorithm
 if __name__ == '__main__':
     print(f"Running Policy Iteration Algorithm for Car Rental Finite MDP ...\n")
     example_1()
