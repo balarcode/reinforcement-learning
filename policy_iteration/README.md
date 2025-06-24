@@ -26,6 +26,8 @@ Below, two examples of a car rental management real-world problem are chosen. Th
 
 [2] scipy.stats.poisson: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.poisson.html
 
+[3] Markov Decision Process (MDP): https://en.wikipedia.org/wiki/Markov_decision_process
+
 ## Citation
 
 Please note that the code and technical details made available are for educational purposes only. The repo is not open for collaboration.
