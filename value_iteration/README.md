@@ -4,6 +4,8 @@ When the policy evaluation algorithm within policy iteration algorithm is trunca
 
 There are two approaches that can be taken to implement value iteration algorithm. First approach is to estimate optimal value function (v*) using iterative truncated policy evaluation algorithm followed by estimating optimal policy (π*) using policy improvement algorithm. Second approach is to perform local expected updates to both policy (π) and value function (v_k(s), k = 0, 1, 2, ...) in one iteration by alternating between local policy improvement algorithm and local truncated policy evaluation algorithm. The implemented code uses the second approach to implement value iteration algorithm.
 
+An example of a gambler's problem is chosen to illustrate value iteration algorithm. In this problem, the finite MDP consists of gambler's capital money in dollars as states, s ε {1, 2, ..., 99}, staked or gambled money in dollars as actions, a ε {0, 1, ..., min(s, 100-s)} and reward being zero on all state transitions except when the gambler reaches the goal of $100 for a reward of +1. The state-value function, v_π(s) should give the probability of winning from each state. The policy will map from states (i.e. the levels of capital) to actions (i.e. levels of stakes). A coin flip is carried out to make bets with coin coming up as heads leading to winning as many dollars as the gambler had staked for and with coin coming up as tails leading to losing the stake. The terminal states include 0 (i.e. losing all the capital) and 100 (i.e. reaching the goal of $100).
+
 Note that v* and v_* notations are used interchangeably. Similarly, π* and π_* notations are used interchangeably. 
 
 ### Value Estimates and Optimal Policy for Probability = 0.25
