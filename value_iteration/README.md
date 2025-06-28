@@ -14,17 +14,25 @@ Value function estimates for one sweep across the entire state space is shown in
 
 ### Value Estimates and Optimal Policy for Probability = 0.4
 
+Value function estimates for one sweep across the entire state space is shown in the first figure below. The envelope of the value function estimates across all the sweeps provides the optimal value function (v*) for the finite MDP. The corresponding optimal policy (π*) is shown in the second figure below. A probability of heads occuring in a coin flip experiment is set to 0.4.
+
 ![example_1_figure_pH_0.4](results/example_1_figure_pH_0.4.png)
 
 ### Value Estimates and Optimal Policy for Probability = 0.5
+
+Value function estimates for one sweep across the entire state space is shown in the first figure below. The envelope of the value function estimates across all the sweeps provides the optimal value function (v*) for the finite MDP. The corresponding optimal policy (π*) is shown in the second figure below. A probability of heads occuring in a coin flip experiment is set to 0.5.
 
 ![example_1_figure_pH_0.5](results/example_1_figure_pH_0.5.png)
 
 ### Value Estimates and Optimal Policy for Probability = 0.55
 
+Value function estimates for one sweep across the entire state space is shown in the first figure below. The envelope of the value function estimates across all the sweeps provides the optimal value function (v*) for the finite MDP. The corresponding optimal policy (π*) is shown in the second figure below. A probability of heads occuring in a coin flip experiment is set to 0.55.
+
 ![example_1_figure_pH_0.55](results/example_1_figure_pH_0.55.png)
 
 ### Value Estimates and Optimal Policy for Probability = 0.75
+
+Value function estimates for one sweep across the entire state space is shown in the first figure below. The envelope of the value function estimates across all the sweeps provides the optimal value function (v*) for the finite MDP. The corresponding optimal policy (π*) is shown in the second figure below. A probability of heads occuring in a coin flip experiment is set to 0.75.
 
 ![example_1_figure_pH_0.75](results/example_1_figure_pH_0.75.png)
 
