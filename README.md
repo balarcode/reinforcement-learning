@@ -8,6 +8,8 @@ The implementation includes insightful comments and notes for anyone interested 
 
 ### Policy Iteration Algorithm
 
+### Value Iteration Algorithm
+
 ## Citation
 
 Please note that the code and technical details made available are for educational purposes only. The repo is not open for collaboration.
