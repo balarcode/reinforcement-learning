@@ -8,7 +8,7 @@ The implementation includes insightful comments and notes for anyone interested 
 
 ### Policy Iteration Algorithm
 
-### Value Iteration Algorithm
+### [Value Iteration Algorithm](https://github.com/balarcode/reinforcement-learning/tree/main/value_iteration)
 
 ## Citation
 
