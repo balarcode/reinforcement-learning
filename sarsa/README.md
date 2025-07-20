@@ -4,6 +4,8 @@
 
 [1] Gymnasium API Documentation: https://gymnasium.farama.org
 
+[2] Making Your Own Custom Environment: https://gymnasium.farama.org/tutorials/gymnasium_basics/environment_creation/
+
 ## Citation
 
 Please note that the code and technical details made available are for educational purposes only. The repo is not open for collaboration.
