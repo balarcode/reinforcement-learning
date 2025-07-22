@@ -1,5 +1,7 @@
 ## Sarsa (On-Policy Temporal Difference Control) Algorithm
 
+The Sarsa acronym describes the data used in the update of action value function i.e. S_t, A_t, R_t+1, S_t+1, A_t+1 where 't' denotes time. Sarsa on-policy temporal difference control algorithm performs generalized policy iteration (GPI) which incorporates interaction between policy-evaluation process and policy-improvement process to eventually stabilize to obtain optimal value function and optimal policy. Sarsa prediction performs policy evaluation.
+
 ### References
 
 [1] Gymnasium API Documentation: https://gymnasium.farama.org
