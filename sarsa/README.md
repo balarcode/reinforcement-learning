@@ -2,6 +2,8 @@
 
 The Sarsa acronym describes the data used in the update of action value function i.e. S_t, A_t, R_t+1, S_t+1, A_t+1 where 't' denotes time. Sarsa on-policy temporal difference control algorithm performs generalized policy iteration (GPI) which incorporates interaction between policy-evaluation process and policy-improvement process to eventually stabilize to obtain optimal value function and optimal policy. Before updating the action value function for Q(S_t, A_t), the Sarsa algorithm requires the knowledge of next state-action pair (S_t+1, A_t+1). That means, the RL agent has to commit to the next action (A_t+1) in next state (S_t+1) before allowing the algorithm to update the action value function. It uses the concept of temporal difference to wait for one time step to form a target from reward, R_t+1 and action value at time, t=t+1 i.e. Q(S_t+1, A_t+1) with a discount factor, γ. The resulting one step temporal difference also called as TD error is scaled with Sarsa step size, α to form an update to the action value function. This is called Sarsa prediction which performs policy evaluation. Using the GPI framework, the initial policy is further improved iteratively in every time step with respect to the updated action value function from policy evaluation. Sarsa is a sample-based algorithm to solve the Bellman equation for action values.
 
+In example-1, a windy gridworld environment using Gymnasium is implemented and two important results are shown below. The Sarsa algorithm uses a learning rate, α = 0.5 and ε-greedy policy with ε = 0.1 in an undiscounted episodic MDP environment.
+
 ### Episodes verses Time Steps (Example-1)
 
 ![Example 1_Episodes_versus_Time_Steps](results/example_1_figure_1.png)
