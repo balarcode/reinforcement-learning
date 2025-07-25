@@ -8,6 +8,8 @@ The implementation includes insightful comments and notes for anyone interested 
 
 ### [Policy Iteration Algorithm](https://github.com/balarcode/reinforcement-learning/tree/main/policy_iteration)
 
+### [Sarsa (On-Policy Temporal Difference Control) Algorithm](https://github.com/balarcode/reinforcement-learning/tree/main/sarsa)
+
 ### [Value Iteration Algorithm](https://github.com/balarcode/reinforcement-learning/tree/main/value_iteration)
 
 ## Citation
