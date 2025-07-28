@@ -1,8 +1,8 @@
 ################################################
 # Title     : Policy Iteration Algorithm
 # Author    : balarcode
-# Version   : 1.1
-# Date      : 22nd June 2025
+# Version   : 1.2
+# Date      : 27th July 2025
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
 # Comments  : Policy iteration algorithm is an iterative reinforcement
@@ -61,6 +61,7 @@ logger = logging.getLogger('policy_iteration')
 logger.setLevel(logging.CRITICAL)
 logger.addHandler(fh)
 logger.disabled = True
+# logger.info(f"Function name() -- Variable1: {Value1} Variable2: {Value2}")
 
 # %%
 # Global Declarations
