@@ -1,8 +1,8 @@
 ####################################################################
 # Title     : Sarsa (On-Policy Temporal Difference Control) Algorithm
 # Author    : balarcode
-# Version   : 1.0
-# Date      : 21st July 2025
+# Version   : 1.1
+# Date      : 27th July 2025
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
 # Comments  : Sarsa as it stands for State-Action-Reward-State-Action
@@ -61,6 +61,7 @@ logger = logging.getLogger('sarsa')
 logger.setLevel(logging.CRITICAL)
 logger.addHandler(fh)
 logger.disabled = True
+# logger.info(f"Function name() -- Variable1: {Value1} Variable2: {Value2}")
 
 # %%
 # Class Definitions
