@@ -1,8 +1,8 @@
 ####################################################################
 # Title     : Sarsa (On-Policy Temporal Difference Control) Algorithm
 # Author    : balarcode
-# Version   : 1.1
-# Date      : 27th July 2025
+# Version   : 1.2
+# Date      : 28th July 2025
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
 # Comments  : Sarsa as it stands for State-Action-Reward-State-Action
@@ -66,7 +66,9 @@ logger.disabled = True
 # %%
 # Class Definitions
 class WindyGridWorldEnv(gym.Env):
-    """ Create Windy Gridworld environment using Gymnasium."""
+    """
+    Create Windy Gridworld environment using Gymnasium.
+    """
     size = (10, 7) # Size of the windy gridworld (7 rows and 10 columns)
     S = (0, 3) # Start State
     G = (7, 3) # Terminal State or Goal State
@@ -80,7 +82,9 @@ class WindyGridWorldEnv(gym.Env):
     reward_range = (-1, -1)
 
     def __init__(self, king=False, stop=False, stochastic=False):
-        """Initialize WindyGridWorldEnv class."""
+        """
+        Initialize WindyGridWorldEnv class.
+        """
         self.king = king
         self.stop = stop
         self.stochastic = stochastic
@@ -101,7 +105,9 @@ class WindyGridWorldEnv(gym.Env):
         self.ax = None
 
     def step(self, action):
-        """Perform one time step move in an episodic task."""
+        """
+        Perform one time step move in an episodic task.
+        """
         assert self.action_space.contains(action)
 
         # Select an action in current state to move to the next state in the windy gridworld
@@ -130,7 +136,9 @@ class WindyGridWorldEnv(gym.Env):
         return state, reward, terminated, truncated, info
 
     def reset(self, seed=None, options=None):
-        """Reset the RL agent and environment."""
+        """
+        Reset the RL agent and environment.
+        """
         super().reset(seed=seed)
         self.state = np.array(self.S, dtype=int) # Start from Start State, S
         self.arrow = np.array((0, 0), dtype=int)
@@ -139,9 +147,11 @@ class WindyGridWorldEnv(gym.Env):
         return self.state, info
 
     def render(self, mode='human'):
-        """Rendering to show results."""
+        """
+        Rendering to show results.
+        """
         if self.ax is None:
-            fig = plt.figure()
+            fig = plt.figure(figsize=(10, 10))
             self.ax = fig.gca()
 
             # Background color by wind strength
@@ -187,9 +197,11 @@ gym.envs.registration.register(
 # %%
 # Function Definitions
 def run_episode(env, policy=None, render=False):
-    """Run one episode in the windy gridworld environment following
+    """
+    Run one episode in the windy gridworld environment following
     the estimated policy by the Sarsa algorithm and return the
-    collected rewards."""
+    collected rewards.
+    """
     assert type(env.action_space) == gym.spaces.Discrete
     assert type(env.observation_space) == gym.spaces.MultiDiscrete
 
@@ -211,13 +223,18 @@ def run_episode(env, policy=None, render=False):
         if render:
             env.render()
 
+    # Save the figure and close the plot
     if render:
-        plt.show()
+        filename = working_directory + 'example_' + str(EXAMPLE) +  '_figure_2.png'
+        plt.savefig(filename)
+        plt.close()
 
     return rewards
 
 def sarsa(env, num_episodes, epsilon=0.1, alpha=0.5, gamma=1.0):
-    """Sarsa (On-Policy Temporal Difference Control) Algorithm."""
+    """
+    Sarsa (On-Policy Temporal Difference Control) Algorithm.
+    """
     assert type(env.action_space) == gym.spaces.Discrete
     assert type(env.observation_space) == gym.spaces.MultiDiscrete
 
@@ -270,22 +287,42 @@ def sarsa(env, num_episodes, epsilon=0.1, alpha=0.5, gamma=1.0):
 
     return Q, policy, history
 
-if __name__ == '__main__':
-    print(f"\nRunning On-Policy Sarsa Temporal Difference Control Algorithm for Windy Gridworld MDP ...\n")
-    env = gym.make('Windy-GridWorld-v0')
-    Q, policy, history = sarsa(env, 8000, epsilon=0.1, alpha=0.5, gamma=1.0)
-
-    # Plot the graph of number of episodes v/s number of accumulated time steps taken
-    plt.figure()
+def plot_results(history):
+    """
+    Plot the graph of number of episodes v/s number of accumulated time steps taken.
+    """
+    plt.figure(figsize=(10, 10))
     plt.xlabel("Time steps"); plt.xlim(0, 8_000)
-    plt.ylabel("Episodes"); plt.ylim(0, 170)
+    plt.ylabel("Episodes"); plt.ylim(0, 200)
     timesteps = np.cumsum([0] + history)
     plt.plot(timesteps, np.arange(len(timesteps)), color='red')
-    plt.show()
-    matplotlib.rcParams['figure.figsize'] = [10, 10]
+    filename = working_directory + 'example_' + str(EXAMPLE) +  '_figure_1.png'
+    plt.savefig(filename)
+    plt.close()
+
+def example_1():
+    """
+    Example-1 solves the standard windy gridworld problem.
+    """
+    print(f"On-Policy Sarsa Temporal Difference Control Algorithm for Windy Gridworld MDP for Environment-1.\n")
+    global EXAMPLE
+    EXAMPLE = 1
+
+    # Initialize the environment
+    env = gym.make('Windy-GridWorld-v0')
+
+    # Run the Sarsa algorithm
+    Q, policy, history = sarsa(env, 8000, epsilon=0.1, alpha=0.5, gamma=1.0)
+
+    # Plot results
+    plot_results(history)
 
     # Run one episode choosing greedy actions from the learnt ε-greedy policy
     # and plot the resulting trajectory in windy gridworld environment from
     # start state, S to terminal state, G
     rewards = run_episode(env, policy, render=True)
     print(f"Episode Length = {len(rewards)}")
+
+if __name__ == '__main__':
+    print(f"\nRunning On-Policy Sarsa Temporal Difference Control Algorithm for Windy Gridworld MDP for Multiple Environments ...\n")
+    example_1()
