@@ -42,6 +42,10 @@ Value function estimates for one sweep across the entire state space is shown in
 
 [1] NumPy - Fundamental package for scientific computing in Python: https://numpy.org
 
+[2] Matplotlib - Visualization with Python: https://matplotlib.org
+
+[3] Markov Decision Process (MDP): https://en.wikipedia.org/wiki/Markov_decision_process
+
 ## Citation
 
 Please note that the code and technical details made available are for educational purposes only. The repo is not open for collaboration.
