@@ -38,6 +38,9 @@ Value function estimates for one sweep across the entire state space is shown in
 
 ![example_1_figure_pH_0.75](results/example_1_figure_pH_0.75.png)
 
+### References
+
+[1] NumPy - Fundamental package for scientific computing in Python: https://numpy.org
 
 ## Citation
 
