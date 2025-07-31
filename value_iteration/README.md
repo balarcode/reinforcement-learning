@@ -40,7 +40,7 @@ Value function estimates for one sweep across the entire state space is shown in
 
 ### References
 
-[1] NumPy - Fundamental package for scientific computing in Python: https://numpy.org
+[1] NumPy - Fundamental Package for Scientific Computing in Python: https://numpy.org
 
 [2] Matplotlib - Visualization with Python: https://matplotlib.org
 
