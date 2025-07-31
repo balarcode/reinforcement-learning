@@ -18,7 +18,11 @@ In example-1, a windy gridworld environment using Gymnasium is implemented and t
 
 [2] Making Your Own Custom Environment: https://gymnasium.farama.org/tutorials/gymnasium_basics/environment_creation/
 
-[3] Markov Decision Process (MDP): https://en.wikipedia.org/wiki/Markov_decision_process
+[3] NumPy - Fundamental Package for Scientific Computing in Python: https://numpy.org
+
+[4] Matplotlib - Visualization with Python: https://matplotlib.org
+
+[5] Markov Decision Process (MDP): https://en.wikipedia.org/wiki/Markov_decision_process
 
 ## Citation
 
