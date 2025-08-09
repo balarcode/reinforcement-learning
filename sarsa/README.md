@@ -20,6 +20,14 @@ In example-1, a windy gridworld environment using Gymnasium is implemented and t
 
 ![Example 1 Near_Optimal_Policy](results/example_2_figure_2.png)
 
+### Episodes verses Time Steps (Example-3)
+
+![Example 1_Episodes_versus_Time_Steps](results/example_3_figure_1.png)
+
+### Near-Optimal Policy (π* + ε) (Example-3)
+
+![Example 1 Near_Optimal_Policy](results/example_3_figure_2.png)
+
 ### References
 
 [1] Gymnasium API Documentation: https://gymnasium.farama.org
