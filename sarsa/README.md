@@ -14,19 +14,43 @@ In example-1, a windy gridworld environment using Gymnasium is implemented and t
 
 ### Episodes verses Time Steps (Example-2)
 
-![Example 1_Episodes_versus_Time_Steps](results/example_2_figure_1.png)
+![Example 2_Episodes_versus_Time_Steps](results/example_2_figure_1.png)
 
 ### Near-Optimal Policy (π* + ε) (Example-2)
 
-![Example 1 Near_Optimal_Policy](results/example_2_figure_2.png)
+![Example 2 Near_Optimal_Policy](results/example_2_figure_2.png)
 
 ### Episodes verses Time Steps (Example-3)
 
-![Example 1_Episodes_versus_Time_Steps](results/example_3_figure_1.png)
+![Example 3_Episodes_versus_Time_Steps](results/example_3_figure_1.png)
 
 ### Near-Optimal Policy (π* + ε) (Example-3)
 
-![Example 1 Near_Optimal_Policy](results/example_3_figure_2.png)
+![Example 3 Near_Optimal_Policy](results/example_3_figure_2.png)
+
+### Episodes verses Time Steps (Example-4 Variation-1)
+
+![Example 4_Variation_1_Episodes_versus_Time_Steps](results/example_4_figure_1_variation_1_average_episode_length_9.png)
+
+### Near-Optimal Policy (π* + ε) (Example-4 Variation-1)
+
+![Example 4_Variation_1 Near_Optimal_Policy](results/example_4_figure_2_variation_1_average_episode_length_9.png)
+
+### Episodes verses Time Steps (Example-4 Variation-2)
+
+![Example 4_Variation_2_Episodes_versus_Time_Steps](results/example_4_figure_1_variation_2_average_episode_length_7.png)
+
+### Near-Optimal Policy (π* + ε) (Example-4 Variation-2)
+
+![Example 4_Variation_2 Near_Optimal_Policy](results/example_4_figure_2_variation_2_average_episode_length_7.png)
+
+### Episodes verses Time Steps (Example-4 Variation-3)
+
+![Example 4_Variation_3_Episodes_versus_Time_Steps](results/example_4_figure_1_variation_3_average_episode_length_21.png)
+
+### Near-Optimal Policy (π* + ε) (Example-4 Variation-3)
+
+![Example 4_Variation_3 Near_Optimal_Policy](results/example_4_figure_2_variation_3_average_episode_length_21.png)
 
 ### References
 
