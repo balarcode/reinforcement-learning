@@ -1,8 +1,8 @@
 ####################################################################
 # Title     : Sarsa (On-Policy Temporal Difference Control) Algorithm
 # Author    : balarcode
-# Version   : 1.2
-# Date      : 28th July 2025
+# Version   : 2.0
+# Date      : 10th August 2025
 # File Type : Python Script / Program
 # File Test : Verified on Python 3.12.6
 # Comments  : Sarsa as it stands for State-Action-Reward-State-Action
@@ -304,7 +304,7 @@ def example_1():
     """
     Example-1 solves the standard windy gridworld problem.
     """
-    print(f"On-Policy Sarsa Temporal Difference Control Algorithm for Windy Gridworld MDP for Environment-1.\n")
+    print(f"\nOn-Policy Sarsa Temporal Difference Control Algorithm for Windy Gridworld MDP for Environment-1.")
     global EXAMPLE
     EXAMPLE = 1
 
@@ -323,6 +323,89 @@ def example_1():
     rewards = run_episode(env, policy, render=True)
     print(f"Episode Length = {len(rewards)}")
 
+def example_2():
+    """
+    Example-2 solves the standard windy gridworld problem along with King's moves which includes
+    four additional actions to the standard four actions. It enables condition-1 defined in
+    WindyGridWorldEnv class.
+    """
+    print(f"\nOn-Policy Sarsa Temporal Difference Control Algorithm for Windy Gridworld MDP for Environment-2.")
+    global EXAMPLE
+    EXAMPLE = 2
+
+    # Initialize the environment
+    env = gym.make('Windy-GridWorld-v0', king=True)
+
+    # Run the Sarsa algorithm
+    Q, policy, history = sarsa(env, 7000, epsilon=0.1, alpha=0.5, gamma=1.0)
+
+    # Plot results
+    plot_results(history)
+
+    # Run one episode choosing greedy actions from the learnt ε-greedy policy
+    # and plot the resulting trajectory in windy gridworld environment from
+    # start state, S to terminal state, G
+    rewards = run_episode(env, policy, render=True)
+    print(f"Average Episode Length = {len(rewards)}")
+
+def example_3():
+    """
+    Example-3 solves the standard windy gridworld problem along with King's moves which includes
+    four additional actions to the standard four actions and a stop action which causes no movement.
+    In total, example-3 which creates environment-3 for RL agent to move from start state, S to
+    terminal state, G will have nine actions. It enables both condition-1 and condition-2 defined in
+    WindyGridWorldEnv class.
+    """
+    print(f"\nOn-Policy Sarsa Temporal Difference Control Algorithm for Windy Gridworld MDP for Environment-3.")
+    global EXAMPLE
+    EXAMPLE = 3
+
+    # Initialize the environment
+    env = gym.make('Windy-GridWorld-v0', king=True, stop=True)
+
+    # Run the Sarsa algorithm
+    Q, policy, history = sarsa(env, 7000, epsilon=0.1, alpha=0.5, gamma=1.0)
+
+    # Plot results
+    plot_results(history)
+
+    # Run one episode choosing greedy actions from the learnt ε-greedy policy
+    # and plot the resulting trajectory in windy gridworld environment from
+    # start state, S to terminal state, G
+    rewards = run_episode(env, policy, render=True)
+    print(f"Episode Length = {len(rewards)}")
+
+def example_4():
+    """
+    Example-4 solves the standard windy gridworld problem along with King's moves which includes
+    four additional actions to the standard four actions. In addition, it includes a stochastic
+    wind condition with effect of the wind taking 1/3 probability in the direction of the wind.
+    Example-4 creates environment-4 for the RL agent to move through a stochastic wind using eight
+    available actions. It enables both condition-1 and condition-3 defined in WindyGridWorldEnv
+    class.
+    """
+    print(f"\nOn-Policy Sarsa Temporal Difference Control Algorithm for Windy Gridworld MDP for Environment-4.")
+    global EXAMPLE
+    EXAMPLE = 4
+
+    # Initialize the environment
+    env = gym.make('Windy-GridWorld-v0', king=True, stochastic=True)
+
+    # Run the Sarsa algorithm
+    Q, policy, history = sarsa(env, 7000, epsilon=0.1, alpha=0.5, gamma=1.0)
+
+    # Plot results
+    plot_results(history)
+
+    # Run one episode choosing greedy actions from the learnt ε-greedy policy
+    # and plot the resulting trajectory in windy gridworld environment from
+    # start state, S to terminal state, G
+    rewards = run_episode(env, policy, render=True)
+    print(f"Episode Length = {len(rewards)}")
+
 if __name__ == '__main__':
-    print(f"\nRunning On-Policy Sarsa Temporal Difference Control Algorithm for Windy Gridworld MDP for Multiple Environments ...\n")
-    example_1()
+    print(f"\nRunning On-Policy Sarsa Temporal Difference Control Algorithm for Windy Gridworld MDP for Multiple Environments ...")
+    example_1() # Environment-1
+    example_2() # Environment-2
+    example_3() # Environment-3
+    example_4() # Environment-4
