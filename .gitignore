@@ -1,0 +1,3 @@
+# Files and directories to be ignored from commiting to GitHub
+
+*DS_Store
