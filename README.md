@@ -6,6 +6,8 @@ The implementation includes insightful comments and notes for anyone interested 
 
 ## Topics
 
+### [Dyna-Q, Dyna-Q+ and Dyna-Q+ with Action-Only Exploration Bonus Algorithms](https://github.com/balarcode/reinforcement-learning/tree/main/dyna)
+
 ### [Policy Iteration Algorithm](https://github.com/balarcode/reinforcement-learning/tree/main/policy_iteration)
 
 ### [Sarsa (On-Policy Temporal Difference Control) Algorithm](https://github.com/balarcode/reinforcement-learning/tree/main/sarsa)
