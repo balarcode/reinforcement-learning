@@ -1,5 +1,21 @@
 ## Dyna-Q, Dyna-Q+ and Dyna-Q+ with Action-Only Exploration Bonus Algorithms
 
+### Results
+
+![Figure_1](results/figure_1.png)
+
+![Figure_2](results/figure_2.png)
+
+![Figure_3](results/figure_3.png)
+
+![Figure_4](results/figure_4.png)
+
+![Figure_5](results/figure_5.png)
+
+![Figure_6](results/figure_6.png)
+
+![Figure_7](results/figure_7.png)
+
 ## Citation
 
 Please note that the code and technical details made available are for educational purposes only. The repo is not open for collaboration.
